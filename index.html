@@ -1,0 +1,37 @@
+<h1>Hola</h1>
+<input type="text" value="" id="input">
+<button onclick="ejecutar()">
+    Hola
+</button>
+
+<br>
+<span for="" id="advertencia"></span>
+<label for="" id="elTexto">el texto</label>
+<script>
+const elTexto = document.getElementById('elTexto');
+const input = document.getElementById('input');
+const advertencia = document.getElementById('advertencia');
+elTexto.style.display = 'none';
+
+advertencia.style.color = 'red'; 
+advertencia.style.backgroundColor = 'yellow';
+
+function ejecutar(){
+
+    if(input.value.length >= 1){
+
+        elTexto.style.display = 'block';
+        alert("usted cargo esto: " + input.value);
+        elTexto.textContent="usted cargo esto: " + input.value;
+        console.log("usted cargo esto: " + input.value);
+        advertencia.style.display = "none";
+
+    }else{
+
+        elTexto.style.display = 'none';
+        advertencia.textContent = "Ingrese texto para continuar!"   
+
+    };
+};
+</script>
+
